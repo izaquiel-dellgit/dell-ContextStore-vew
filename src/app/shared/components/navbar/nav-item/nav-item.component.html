@@ -1,0 +1,12 @@
+<div
+  class="nav-item"
+  [ngClass]="{ selected: selected }"
+  (click)="itemClicked()"
+>
+  <div class="nav-icon">
+    <app-dell-icon [dellStyles]="iconStyles"></app-dell-icon>
+  </div>
+  <div *ngIf="!collapsed" class="nav-label">
+    {{ label }}
+  </div>
+</div>

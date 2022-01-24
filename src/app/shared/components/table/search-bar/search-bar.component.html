@@ -1,0 +1,32 @@
+<div class="search-container">
+    <div class="selection">
+        <div class="form-field-container">
+          <div class="select">
+            <app-select [label]="'Objects'" [objects]="optionsObjects"
+                        [placeholder]="'Objects'" [multi]="true" 
+                        [selectAll]="true"
+                        [itemsShowLimit]="1"
+                        (selecteds)="selectedObjects($event)">
+            </app-select>
+          </div>
+        </div>
+    </div>
+    <div class="selection">
+        <div class="form-field-container">
+          <div class="select">
+            <app-select [label]="'Change'" [objects]="optionsChanges"
+                        [placeholder]="'Changes'" [multi]="true" 
+                        [selectAll]="true"
+                        [itemsShowLimit]="1"
+                        (selecteds)="selectedChanges($event)" >
+            </app-select>
+          </div>
+        </div>
+    </div>
+    <div class="search-field">
+        <div class="form-input-text-container">
+            <label class="label">Name</label>
+            <input #searchText type="text" placeholder="Search text" (input)="textChanged($event)"/>
+        </div>
+    </div>
+</div>

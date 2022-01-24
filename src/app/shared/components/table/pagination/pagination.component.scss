@@ -1,0 +1,90 @@
+* { 
+    margin: 0;
+}
+
+@import url('../../../../shared/components/dell-btn/dell-btn.component.scss') dds__btn-secondary;
+
+.container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    .page-info {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+
+        input {
+            background-color: transparent;
+            color:inherit;
+            border: 1px solid var(--border-color);
+        }
+        span {
+            padding-top: 3px;
+        }
+    }
+    .nav-icon {
+        font-size: 16px;
+        &.left {
+            padding-right: 5px;
+        }
+        &.right {
+            padding-left: 5px;
+        }
+
+    }
+}
+
+.page-info > input {
+    margin-left: 8px;
+    margin-right: 8px;
+    text-align: center;
+    
+    &:disabled{
+        opacity: 0.5;
+    }
+}
+
+.button-label {
+    padding: 5px 0px 5px 0px;
+}
+
+.next-items {
+    display:flex;
+    flex-direction: row;
+    align-items: center;
+    width:25%;
+}
+.items-select {
+    display:flex;
+    justify-content: space-between;
+    width:70%;
+    margin-left: 20px;
+    align-items: center;
+
+    select {
+        width:30%;
+        height: 30px;
+        padding-top: 5px;
+        padding-left:2px;
+        background-color: transparent;
+        border: 1px solid var(--secondary-button) !important;
+        
+    }
+    span {
+        width:60%;
+        margin-left: 5px;
+    }
+}
+:host ::ng-deep {
+    button[class~=dds__btn-secondary]:disabled {
+        opacity: 0.5 !important;
+        background-color: transparent !important;
+    }
+}
+
+select.dds__form-control {
+    color: var(--secondary-button);
+        option {
+            background:var(--background-primary);
+        }
+}

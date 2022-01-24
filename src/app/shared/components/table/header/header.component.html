@@ -1,0 +1,23 @@
+<div class="container-header">
+    <div class="column-object" (click)="sort(headers[0])">
+        <span>{{headers[0].label}}</span>
+        <app-dell-icon *ngIf="headers[0].order == orderKindUnordered" dellStyles="dds__arrow-tri-solid-right descending"></app-dell-icon>
+        <app-dell-icon *ngIf="headers[0].order == orderKindUnordered" dellStyles="dds__arrow-tri-solid-right unordered"></app-dell-icon>
+        <app-dell-icon *ngIf="headers[0].order == orderKindAscending" dellStyles="dds__arrow-tri-solid-right ascending"></app-dell-icon>
+        <app-dell-icon *ngIf="headers[0].order == orderKindDescending" dellStyles="dds__arrow-tri-solid-right descending"></app-dell-icon>
+    </div>
+    <div class="column-name" (click)="sort(headers[1])">
+        {{headers[1].label}}
+        <app-dell-icon *ngIf="headers[1].order == orderKindUnordered" dellStyles="dds__arrow-tri-solid-right descending"></app-dell-icon>
+        <app-dell-icon *ngIf="headers[1].order == orderKindUnordered" dellStyles="dds__arrow-tri-solid-right unordered"></app-dell-icon>
+        <app-dell-icon *ngIf="headers[1].order == orderKindAscending" dellStyles="dds__arrow-tri-solid-right ascending"></app-dell-icon>
+        <app-dell-icon *ngIf="headers[1].order == orderKindDescending" dellStyles="dds__arrow-tri-solid-right descending"></app-dell-icon>
+    </div>
+    <div class="column-changes" (click)="sort(headers[2])">
+        <span>{{headers[2].label}}({{changes.length}})</span>
+        <app-dell-icon *ngIf="headers[2].order == orderKindUnordered" dellStyles="dds__arrow-tri-solid-right descending"></app-dell-icon>
+        <app-dell-icon *ngIf="headers[2].order == orderKindUnordered" dellStyles="dds__arrow-tri-solid-right unordered"></app-dell-icon>
+        <app-dell-icon *ngIf="headers[2].order == orderKindAscending" dellStyles="dds__arrow-tri-solid-right ascending"></app-dell-icon>
+        <app-dell-icon *ngIf="headers[2].order == orderKindDescending" dellStyles="dds__arrow-tri-solid-right descending"></app-dell-icon>
+    </div>
+</div>

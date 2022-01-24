@@ -1,0 +1,33 @@
+<div class="table">
+    <app-search-bar 
+        [changesSubject]="changesSubject" 
+        (onSelectedChangeType)="filterByChangeType($event)"
+        (onSelectedObjectType)="filterByObjectType($event)"
+        (onSearchTextChange)="filterBySearchText($event)">
+        
+    </app-search-bar>
+    <app-table-header
+        [changes]="filteredChanges"
+        (onSorting)="sort($event)"
+    ></app-table-header>
+    <div class="body">
+        <app-body *ngFor="let change of exhibitedChanges" 
+            [change]="change" 
+            [colapse]="true"
+            [selectedChange]="selectedChange"
+            [mainChange]="mainChange"
+            (onClicked)="this.onRowClicked.emit($event)">
+        </app-body>
+    </div>
+    <div class="pagination">
+        <app-pagination 
+            [items] = "filteredChanges"
+            [fromItem]="fromItem"
+            [toItem]="toItem"
+            [currentPage]="currentPage"
+            [pageSize]="pageSize"
+            [changesSubject]="changesSubject"
+            (onPageChanged)="changePage($event)"
+            (onItemsPerPageChanged)="changeItemsPerPage($event)"></app-pagination>
+    </div>
+</div>

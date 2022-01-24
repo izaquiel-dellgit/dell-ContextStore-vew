@@ -1,0 +1,40 @@
+<div class="container">
+    <app-dell-btn class="previous-button" [disabled]="isPreviousDisabled()" type="secondary"
+        (onClick)="previousClicked()">
+        <div class="button-container">
+            <span class="nav-icon left">
+                < </span>
+                    <label class="button-label">
+                        Previous
+                    </label>
+        </div>
+    </app-dell-btn>
+    <div class="page-info">
+        <span>Page </span>
+        <input #pageInput type="text" size="3"  [disabled]="totalPages == 0"
+            [value]="currentPage" 
+            (blur)="changeCurrentPageOnBlur($event)"
+            (keyup.enter)="changeCurrentPageOnKeyEnter($event)"/>
+        <span>&nbsp;of&nbsp;&nbsp;{{totalPages}}</span>
+
+    </div>
+    <div class="next-items">
+        <app-dell-btn [disabled]="isNextDisabled()" type="secondary" (onClick)="nextClicked()">
+            <div class="button-container">
+                <label class="button-label">
+                    Next
+                </label>
+                <span class="nav-icon right">
+                    >
+                </span>
+            </div>
+        </app-dell-btn>
+        <div class="dds__form-group items-select"> 
+            <select class="dds__form-control" (change)="changeItemsPerPage($event)"> 
+                <option *ngFor="let option of pageSizes" [selected]="pageSize == option">{{option}}</option> 
+            </select>
+            <span>Items per page</span>
+        </div>
+    </div>
+    
+</div>

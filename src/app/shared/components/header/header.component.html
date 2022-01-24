@@ -1,0 +1,19 @@
+<div class="header-wrapper">
+  <div class="header-content">
+    <div class="logo-area cp">
+      <img
+        [src]="lightMode ?
+          '../../../assets/devops_header_logo_light.svg'
+         :  '../../../assets/devops_header_logo_black.svg'"
+        alt="Context Store Logo"/>
+    </div>
+    <div class="user-area">
+      <app-toggle-button (toggleClicked)="toggleTheme()"></app-toggle-button>
+      <div class="user-icon">
+        <app-dell-icon
+          dellStyles="dds__user-cir"
+        ></app-dell-icon>
+      </div>
+    </div>
+  </div>
+</div>

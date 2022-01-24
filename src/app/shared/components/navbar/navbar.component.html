@@ -1,0 +1,15 @@
+<div class="navbar" [@collapse]="collapsed">
+  <div class="nav-items">
+    <app-nav-item *ngFor="let item of items"
+                  [iconName]="item.iconName"
+                  [label]="item.label"
+                  [iconStyles]="item.iconStyles"
+                  [collapsed]="collapsed"
+                  [selected]="selectedItem.iconName === item.iconName"
+                  (onChangeSelected)="changeSelectedItem($event)"></app-nav-item>
+  </div>
+  <div class="collapse-expand">
+    <app-dell-icon *ngIf="!collapsed" dellStyles="dds__chevron-left" (click)="changeCollapsed()"></app-dell-icon>
+    <app-dell-icon *ngIf="collapsed" dellStyles="dds__chevron-right" (click)="changeCollapsed()"></app-dell-icon>
+  </div>
+</div>

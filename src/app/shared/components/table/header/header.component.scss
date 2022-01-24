@@ -1,0 +1,54 @@
+:host ::ng-deep {
+    .container-header {
+        width:100%;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        color: var(--text-primary);
+        border-bottom: 1px solid var(--border-color);
+        height: 1.75rem;
+
+        .column-object {
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            width: 5%;
+            max-width: 5%;
+            min-width: 5%;
+            cursor:pointer;
+        }
+        .column-name {
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            width: 88%;
+            max-width: 88%;
+            min-width: 88%;
+            cursor:pointer;
+        }
+        .column-changes {
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            width: 7%;
+            max-width: 7%;
+            min-width: 7%;
+            cursor:pointer;
+        }
+        .container-icon {
+            color: var(--text-primary);
+            margin-left: 2px;
+            font-size: 10px;
+        }
+        .ascending{
+            transform: rotate(-90deg) translateX(4px);
+        }
+        .descending {
+            transform: rotate(90deg) translateX(4px);
+        }
+        .unordered{
+            transform: rotate(-90deg) translateX(4px) translateY(-12px);
+        }
+    }
+}

@@ -1,0 +1,35 @@
+.nav-item {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+.nav-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+}
+
+.nav-label {
+  display: flex;
+  justify-content: flex-start;
+  width: 150px;
+  color: var(--text-secondary);
+}
+
+.selected {
+  border-left: 3px solid var(--text-primary);
+  border-radius: 2px;
+  background-color: var(--background-primary);
+}
+
+.selected .nav-icon {
+  padding-right: 4px;
+}

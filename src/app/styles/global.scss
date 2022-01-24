@@ -1,0 +1,69 @@
+@import "./icons";
+@import "./mixins";
+@import "./form-fields";
+
+@import url("https://fonts.googleapis.com/css2?family=Ropa+Sans&display=swap");
+@import url("https://uicore.dellcdn.com/1.5.2/css/dds-reboot.min.css");
+@import url("https://uicore.dellcdn.com/1.5.2/css/dds-all-with-fonts.min.css");
+@import url("https://uicore.dellcdn.com/1.5.2/js/index.min.js");
+@import url('https://uicore.dellcdn.com/1.5.2/css/dds-fonts.css');
+
+:root {
+  --header-height: 50px;
+}
+
+* {
+  font-family: "Ropa Sans", sans-serif;
+  @include default-scrollbar;
+}
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  min-height: 100%;
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+body {
+  box-sizing: border-box;
+  padding: 0;
+  background-color: var(--background-primary);
+}
+
+a,
+.cp {
+  cursor: pointer;
+}
+
+h1,
+h2 {
+  margin-bottom: 2rem;
+}
+
+
+.info {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: start;
+  color: var(--smooth-color);
+
+  > label {
+    margin-left: 10px;
+  }
+
+  .active {
+    color: var(--highlight-color);
+  }
+}

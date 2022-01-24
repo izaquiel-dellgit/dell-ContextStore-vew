@@ -1,0 +1,158 @@
+@import "../../../styles/mixins";
+@import "../../../styles/_icons";
+
+.header-wrapper {
+  height: var(--header-height);
+  width: 100%;
+  position: relative;
+  background: var(--background-secondary);
+}
+
+.header-content {
+  height: 100%;
+  width: 100%;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  background-color: var(--background-secondary);
+
+  & img {
+    height: 27px;
+    margin-left: 3px;
+  }
+
+  & .user-area {
+    display: flex;
+    align-items: baseline;
+    justify-content: end;
+    width: 100px;
+    //position: relative;
+    color: var(--text-secondary);
+
+    & .user-icon {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 40px;
+      height: 40px;
+      font-size: 1rem;
+    }
+  }
+
+  & .settings-icon {
+    height: 30px;
+    width: 30px;
+    @include justify-center;
+    border-radius: 50%;
+    color: var(--text-secondary);
+  }
+
+  & .dark {
+    transform: scaleX(-1);
+  }
+
+  & .user-icon {
+    height: 30px;
+    width: 30px;
+    @include justify-center;
+    border-radius: 50%;
+    color: var(--text-secondary);
+  }
+}
+
+.logo-area {
+  display: flex;
+
+  & img {
+    width: 12rem;
+  }
+}
+
+.dropdown-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  hr {
+    width: 100%;
+    border: 0;
+    border-top: 1px solid;
+  }
+
+  .icon-ic-card-user {
+    font-size: 3.5rem;
+  }
+
+  .user-info {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    align-items: center;
+    padding-bottom: 15px;
+
+    .user-info-account {
+      display: flex;
+      flex-direction: column;
+      margin-left: 10px;
+    }
+
+    .user-icon {
+      font-size: 3rem;
+    }
+
+    .user-info-name {
+      text-transform: capitalize;
+    }
+
+    .user-info-email {
+      margin-top: 4px;
+      font-size: 13px;
+    }
+  }
+
+  .dropdown-actions {
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+  }
+}
+
+.action-button {
+  cursor: pointer;
+  padding: 15px 0 0;
+  animation-name: animation-in;
+  animation-duration: 0.3s;
+  transition-timing-function: ease-in;
+  &:hover {
+    color: var(--text-secondary);
+  }
+}
+
+.blurred-page {
+  position: absolute;
+  overflow: hidden;
+  left: 0;
+  top: 0;
+  height: 100vh;
+  width: 100vw;
+  backdrop-filter: blur(4px);
+  z-index: 20;
+}
+
+.extra-small {
+  font-size: 0.8rem;
+}
+
+.small {
+  font-size: 1.2rem;
+}
+
+.medium {
+  font-size: 1.8rem;
+}
+
+.large {
+  font-size: 2rem;
+}

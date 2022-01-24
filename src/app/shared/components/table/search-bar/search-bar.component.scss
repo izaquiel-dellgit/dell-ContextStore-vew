@@ -1,0 +1,36 @@
+:host ::ng-deep {
+    .search-container {
+        display:flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        height: 30px;
+        margin-bottom: 6px;
+
+        .selection {
+            width: 35%;
+            margin-right: 20px;
+            height: 30px;
+            display: flex;
+            justify-content: flex-start;
+            color: var(--tableline-color);
+
+            .select {
+                width: 100%;
+            }
+            
+        }
+        .search-field {
+            width:90%;
+            height: 30px;
+            .form-input-text-container {
+                input {
+                    font-size: 0.8rem;
+                }
+                
+            }
+        }    
+    }
+}
+
+

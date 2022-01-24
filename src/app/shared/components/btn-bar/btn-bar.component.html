@@ -1,0 +1,14 @@
+<div class="colapse-btns">
+  <div class="colapse-btn" [ngClass]="!showParameters?'':'hidden'" (click)="toggleShowParameters()">
+    <app-icon [type]="'compare'" [size]="'small'"></app-icon>
+  </div>
+  <div class="colapse-btn" [ngClass]="!showSummary?'':'hidden'" (click)="toggleShowSummary()">
+    <app-icon [type]="'status'" [size]="'small'"></app-icon>
+  </div>
+  <div class="colapse-btn" [ngClass]="!showTable?'':'hidden'" (click)="toggleShowTable()">
+    <app-icon [type]="'list'" [size]="'small'"></app-icon>
+  </div>
+  <div class="colapse-btn"[ngClass]="!showDiffResults?'':'hidden'"  (click)="toggleShowDiffResults()">
+    <app-icon [type]="'results'" [size]="'small'"></app-icon>
+  </div>
+</div>

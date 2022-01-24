@@ -1,0 +1,12 @@
+.container-icon {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  color: var(--smooth-color);
+}
+
+.extra-large {
+  font-size: 3rem;
+}
